@@ -1,4 +1,3 @@
-//your JS code here. If required.
 document.addEventListener("DOMContentLoaded", function () {
     const counterElement = document.getElementById("counter");
     const incrementButton = document.getElementById("incrementBtn");
@@ -7,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
     counterElement.textContent = counterValue;
 
     incrementButton.addEventListener("click", function () {
-        alert(`Current value: ${counterValue}`);
+        alert(counterValue); // Changed: Only alert the raw number
         counterValue++;
         counterElement.textContent = counterValue;
     });
