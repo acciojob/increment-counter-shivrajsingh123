@@ -1,13 +1,14 @@
 //your JS code here. If required.
 document.addEventListener("DOMContentLoaded", function () {
-    let counter =0;
-
     const counterElement = document.getElementById("counter");
-    const incrementBtn = document.getElementById("incrementBtn");
+    const incrementButton = document.getElementById("incrementBtn");
+    
+    let counterValue = parseInt(counterElement.textContent) || 0;
+    counterElement.textContent = counterValue;
 
-    incrementBtn.addEventListener("click", function () {
-        alert(`Current value: ${counter}`); // Show alert before incrementing
-        counter++;
-        counterElement.textContent = counter; // Update the counter display
+    incrementButton.addEventListener("click", function () {
+        alert(`Current value: ${counterValue}`);
+        counterValue++;
+        counterElement.textContent = counterValue;
     });
 });
